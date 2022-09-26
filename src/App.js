@@ -7,7 +7,7 @@ function App() {
     <div className="App">
 
       <NavBar />
-      <ItemListContainer />
+      <ItemListContainer title="Body section." />
 
     </div>
   );

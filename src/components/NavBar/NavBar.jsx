@@ -27,7 +27,7 @@ export function NavBar() {
                     </Nav>
                 </Navbar.Collapse>
             </Container>
-            <CartWidget/>
+            <CartWidget />
         </Navbar>
     );
 };
