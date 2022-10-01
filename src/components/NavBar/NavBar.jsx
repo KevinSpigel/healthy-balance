@@ -24,7 +24,6 @@ export function NavBar() {
                         </NavDropdown>
                         <Nav.Link href="#aboutUs">¿Quiénes Somos?</Nav.Link>
                         <Nav.Link href="#healthyTips">Tips Saludables</Nav.Link>
-                        <Nav.Link href="#contact">Contacto</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
