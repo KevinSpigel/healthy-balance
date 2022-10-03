@@ -19,8 +19,8 @@ export function NavBar() {
                     <Nav className="me-auto grid gap-4">
                         <Nav.Link className="ms-5" href="#home">Home</Nav.Link>
                         <NavDropdown title="Productos" id="basic-nav-dropdown">
-                            <NavDropdown.Item href="#action/3.1">Hamburguesas</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">Congelados</NavDropdown.Item>
+                            <NavDropdown.Item href="#Productos/Hamburguesas">Hamburguesas</NavDropdown.Item>
+                            <NavDropdown.Item href="#Productos/Congelados">Congelados</NavDropdown.Item>
                         </NavDropdown>
                         <Nav.Link href="#aboutUs">¿Quiénes Somos?</Nav.Link>
                         <Nav.Link href="#healthyTips">Tips Saludables</Nav.Link>
