@@ -8,7 +8,7 @@ export const ItemListContainer = ({ title }) => {
 
     const products = [
         { id: 1, name: "Hamburguesa Lentejas", imgProduct: "", description: "Lentejas", price: "", stock: 10 },
-        { id: 2, name: "Hamburguesa Garbanzos", imgProduct: "", description: "Garbanzos", price: "", stock: 20 },
+        { id: 2, name: "Hamburguesa Quinoa", imgProduct: "", description: "Quinoa", price: "", stock: 20 },
         { id: 3, name: "Hamburguesa Espinaca", imgProduct: "", description: "Espinaca", price: "", stock: 15 },
     ];
 

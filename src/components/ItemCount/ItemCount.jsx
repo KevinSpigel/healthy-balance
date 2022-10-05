@@ -7,13 +7,22 @@ export function ItemCount() {
 
     const [product, demandedProduct] = useState(1)
 
+
+    const removeProduct = () => {
+        if (product >=! 0) {
+            demandedProduct(product - 1)
+        }
+        else {
+            demandedProduct(0)
+        }
+    };
+
+
     const addProduct = () => {
         demandedProduct(product + 1)
     };
 
-    const removeProduct = () => {
-        demandedProduct(product - 1)
-    };
+
 
     return (
         <div>

@@ -1,8 +1,8 @@
 import '../Footer/Footer.css';
-import FbIcon from '../../assets/facebook.png';
-import IgIcon from '../../assets/instagram.png';
-import MailIcon from '../../assets/email.png';
-import WpIcon from '../../assets/whatsapp.png';
+import FbIcon from '../../assets/socialNetworksIcon/facebook.png';
+import IgIcon from '../../assets/socialNetworksIcon/instagram.png';
+import MailIcon from '../../assets/socialNetworksIcon/email.png';
+import WpIcon from '../../assets/socialNetworksIcon/whatsapp.png';
 
 
 export const Footer = () => {
