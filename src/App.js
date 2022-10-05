@@ -10,7 +10,7 @@ function App() {
     <div className="App">
 
       <NavBar />
-      <ItemListContainer title="Body section." />
+      <ItemListContainer title="Item List Container" />
       <Footer />
 
     </div>

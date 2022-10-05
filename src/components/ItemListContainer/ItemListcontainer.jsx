@@ -1,6 +1,6 @@
 import '../ItemListContainer/ItemListContainer.css';
 import { useEffect, useState } from 'react';
-import { CardProduct } from '../CardProduct/CardProduct';
+import { ItemList } from '../ItemList/ItemList';
 
 
 
@@ -22,24 +22,31 @@ export const ItemListContainer = ({ title }) => {
 
     useEffect(() => {
         obtainProducts()
-            .then((productList) => setProductList(productList))
-            .catch((error) => { console.log(error) })
+            .then((productList) => {
+                setProductList(productList);
+                setLoading(false);
+            })
+            .catch((error) => console.log(error))
     }, []);
 
     const [productList, setProductList] = useState([]);
+
+    const [loading, setLoading] = useState(true);
+
+
+
 
 
     return (
         <div>
             <div>{title}</div>
-
             {
-                productList.map(element => {
-                    return (
-                        <CardProduct key={element.id} name={element.name} imgProduct={element.imgProduct} description={element.description} price={element.price} stock={element.stock} />
-                    )
-                })
+                loading ? <p> Loading...</p>
+                    :
+                    <ItemList items={productList} />
             }
         </div>
     )
 };
+
+
