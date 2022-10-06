@@ -1,4 +1,4 @@
-import '../ItemListContainer/ItemListContainer.css';
+import '../ItemListContainer/ItemListContainerStyles/ItemListContainerStyles.css';
 import { useEffect, useState } from 'react';
 import { ItemList } from '../ItemList/ItemList';
 

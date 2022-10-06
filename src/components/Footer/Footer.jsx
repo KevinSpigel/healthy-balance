@@ -1,4 +1,4 @@
-import '../Footer/Footer.css';
+import '../Footer/FooterStyles/FooterStyles.css';
 import FbIcon from '../../assets/socialNetworksIcon/facebook.png';
 import IgIcon from '../../assets/socialNetworksIcon/instagram.png';
 import MailIcon from '../../assets/socialNetworksIcon/email.png';

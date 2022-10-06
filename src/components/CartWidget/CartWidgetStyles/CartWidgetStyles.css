@@ -1,0 +1,16 @@
+.cart-button {
+  border: none;
+  background-color: transparent;
+}
+
+.bubble {
+  text-align: center;
+  padding: 3px;
+  font-size: x-small;
+  color: white;
+  background-color: #d00303;
+  border-radius: 50%;
+  -webkit-box-shadow: 1px 1px 1px #bebebe;
+          box-shadow: 1px 1px 1px #bebebe;
+}
+/*# sourceMappingURL=CartWidgetStyles.css.map */

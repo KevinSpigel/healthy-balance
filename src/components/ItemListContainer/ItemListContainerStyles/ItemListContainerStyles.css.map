@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "ItemListContainerStyles.scss"
+    ],
+    "names": [],
+    "file": "ItemListContainerStyles.css"
+}

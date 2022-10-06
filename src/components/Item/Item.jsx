@@ -1,4 +1,4 @@
-import './Item.css';
+import '../Item/ItemStyles/ItemStyles.css';
 import { ItemCount } from '../ItemCount/ItemCount';
 
 export const Item = ({ item }) => {

@@ -1,4 +1,4 @@
-import './ItemList.css';
+import '../ItemList/ItemListStyles/ItemListStyles.css';
 
 import { Item } from '../Item/Item';
 

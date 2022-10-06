@@ -1,4 +1,4 @@
-import './ItemDetail.css';
+import '../ItemDetail/ItemDetailStyles/ItemDetailStyles.css';
 
 export const ItemDetail = () => {
 
