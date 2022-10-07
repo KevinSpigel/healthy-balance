@@ -1,23 +1,20 @@
 import '../ItemListContainer/ItemListContainerStyles/ItemListContainerStyles.css';
+
+import { productsDataBase } from '../dataBase/dataBase';
 import { useEffect, useState } from 'react';
 import { ItemList } from '../ItemList/ItemList';
-import {Link} from 'react-router-dom'; // el componente Link reemplazará las etiquetas a
+import { Link } from 'react-router-dom'; // el componente Link reemplazará las etiquetas a
 
 
 
 
 export const ItemListContainer = ({ title }) => {
 
-    const products = [
-        { id: 1, name: "Hamburguesa Lentejas", imgProduct: "", description: "Lentejas", price: "", stock: 10 },
-        { id: 2, name: "Hamburguesa Quinoa", imgProduct: "", description: "Quinoa", price: "", stock: 20 },
-        { id: 3, name: "Hamburguesa Espinaca", imgProduct: "", description: "Espinaca", price: "", stock: 15 },
-    ];
 
     const obtainProducts = () => {
         return new Promise((resolve, reject) => {
             setTimeout(() => {
-                resolve(products)
+                resolve(productsDataBase)
             }, 2000)
         })
     };
