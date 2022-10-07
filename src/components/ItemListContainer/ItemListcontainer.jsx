@@ -1,6 +1,8 @@
 import '../ItemListContainer/ItemListContainerStyles/ItemListContainerStyles.css';
 import { useEffect, useState } from 'react';
 import { ItemList } from '../ItemList/ItemList';
+import {Link} from 'react-router-dom'; // el componente Link reemplazará las etiquetas a
+
 
 
 

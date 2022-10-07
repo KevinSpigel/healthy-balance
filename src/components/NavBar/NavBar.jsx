@@ -6,11 +6,12 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Logo from '../../assets/logo.png';
 import { CartWidget } from '../CartWidget/CartWidget';
-
+import {Link} from 'react-router-dom'; // el componente Link reemplazará las etiquetas a
 
 
 export function NavBar() {
     return (
+        <div>
         <Navbar bg="light" expand="lg">
             <Container>
                 <Navbar.Brand href="#home"><img src={Logo} alt="Logo" width={150} /></Navbar.Brand>
@@ -29,6 +30,7 @@ export function NavBar() {
             </Container>
             <CartWidget />
         </Navbar>
+        </div>
     );
 };
 
