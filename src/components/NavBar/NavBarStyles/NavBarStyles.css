@@ -33,6 +33,7 @@
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   grid-row: 1/2;
+  margin-top: 20px;
 }
 
 .itemsDiv {
@@ -52,5 +53,15 @@
           align-items: center;
   text-align: center;
   margin-top: 5px;
+}
+
+.activeClass {
+  color: red;
+  border-color: 2px solid #740074;
+  border-bottom-width: thick;
+}
+
+.inactiveClass {
+  color: black;
 }
 /*# sourceMappingURL=NavBarStyles.css.map */

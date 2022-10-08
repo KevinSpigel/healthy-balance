@@ -1,17 +1,21 @@
 import '../Item/ItemStyles/ItemStyles.css';
 import { ItemCount } from '../ItemCount/ItemCount';
-import { Link } from 'react-router-dom'; // el componente Link reemplazará las etiquetas a
+import { Link } from 'react-router-dom';
 
 
 export const Item = ({ item }) => {
 
     return (
         <div>
-            <img src={item.imgProduct} alt={item.name} />
             <h4>{item.name}</h4>
+            <img className="imgProducts" src={item.imgProduct} alt={item.name} />
             <p>${item.price}</p>
+
             <ItemCount />
-            <button>Ver Detalle</button>
+
+            <Link to={`/item/${item.id}`}>
+                <button>Ver Detalle</button>
+            </Link>
         </div>
     )
 };

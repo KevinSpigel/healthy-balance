@@ -17,6 +17,7 @@
 .imgLogo {
     grid-column: 2/3;
     grid-row: 1/2;
+    margin-top: 20px;
 }
 
 .itemsDiv {
@@ -27,4 +28,14 @@
     align-items: center;
     text-align: center;
     margin-top: 5px;
+}
+
+.activeClass{
+    color: red;
+    border-color: 2px solid rgb(116, 0, 116) ;
+    border-bottom-width: thick;
+}
+
+.inactiveClass{
+    color: black;
 }

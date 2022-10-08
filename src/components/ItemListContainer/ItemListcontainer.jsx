@@ -7,13 +7,14 @@ import { ItemList } from '../ItemList/ItemList';
 import Button from 'react-bootstrap/Button';
 import Spinner from 'react-bootstrap/Spinner';
 
-import { Link } from 'react-router-dom'; // el componente Link reemplazará las etiquetas a
+import { useParams } from 'react-router-dom';
 
 
 
+export const ItemListContainer = ({ }) => {
 
-export const ItemListContainer = ({ title }) => {
 
+    const { categoryId } = useParams();
 
     const obtainProducts = () => {
         return new Promise((resolve, reject) => {
@@ -23,26 +24,30 @@ export const ItemListContainer = ({ title }) => {
         })
     };
 
-    useEffect(() => {
-        obtainProducts()
-            .then((productList) => {
-                setProductList(productList);
-                setLoading(false);
-            })
-            .catch((error) => console.log(error))
-    }, []);
-
     const [productList, setProductList] = useState([]);
 
     const [loading, setLoading] = useState(true);
 
 
-
+    useEffect(() => {
+        obtainProducts()
+            .then((productList) => {
+                if (categoryId) {
+                    const productsFiltered = productList.filter(elm => elm.category === categoryId)
+                    setProductList(productsFiltered);
+                    setLoading(false);
+                }
+                else {
+                    setProductList(productList);
+                    setLoading(false);
+                }
+            })
+            .catch((error) => console.log(error))
+    }, [categoryId]);
 
 
     return (
         <div>
-            <div>{title}</div>
             {
                 loading ?
                     <div>

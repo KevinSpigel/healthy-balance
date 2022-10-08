@@ -8,7 +8,6 @@ export const ItemList = ({ items }) => {
 
     return (
         <div>
-            <div>Item List</div>
             <div>
                 {
                     items.map(element => (

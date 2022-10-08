@@ -26,9 +26,10 @@ export function ItemCount() {
 
     return (
         <div>
+            <button onClick={removeProduct}>-</button>
             <div>{product}</div>
             <button onClick={addProduct} >+</button>
-            <button onClick={removeProduct}>-</button>
+
             <button>Add to {<FontAwesomeIcon className="fa-1x" icon={faCartShopping} />}</button>
         </div>
     )
