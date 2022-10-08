@@ -9,11 +9,11 @@ export function ItemCount() {
 
 
     const removeProduct = () => {
-        if (product >=! 0) {
+        if (product >= 2) {
             demandedProduct(product - 1)
         }
         else {
-            demandedProduct(0)
+            demandedProduct(1)
         }
     };
 
