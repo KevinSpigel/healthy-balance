@@ -32,7 +32,7 @@ footer {
 .divIcon img {
   width: 40px;
   height: 40px;
-  margin: 5px;
+  margin: 7px;
   border-radius: 50%;
   -webkit-box-shadow: 2px 2px 2px #c8c8c8;
           box-shadow: 2px 2px 2px #c8c8c8;
@@ -70,7 +70,7 @@ footer {
           justify-content: center;
   height: 50px;
   width: 35px;
-  background-color: rgba(192, 189, 189, 0.347);
+  background-color: rgba(187, 184, 184, 0.499);
   border-radius: 5%;
 }
 
@@ -79,8 +79,8 @@ footer {
 }
 
 .dropup:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  -webkit-transform: scale(1.04);
+          transform: scale(1.04);
 }
 
 .dropUpHome {
@@ -95,7 +95,7 @@ footer {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: end;
-  margin-top: -15px;
+  margin-top: -18px;
   margin-right: 20px;
 }
 /*# sourceMappingURL=FooterStyles.css.map */

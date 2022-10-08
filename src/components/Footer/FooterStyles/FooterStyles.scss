@@ -21,7 +21,7 @@ footer {
     img {
         width: 40px;
         height: 40px;
-        margin: 5px;
+        margin: 7px;
         border-radius: 50%;
         box-shadow: 2px 2px 2px rgb(200, 200, 200);
 
@@ -45,7 +45,7 @@ footer {
     justify-content: center;
     height: 50px;
     width: 35px;
-    background-color: rgba(192, 189, 189, 0.347);
+    background-color: rgba(187, 184, 184, 0.499);
     border-radius: 5%;
 
 
@@ -54,16 +54,16 @@ footer {
     }
 
     &:hover {
-        transform: scale(1.1)
+        transform: scale(1.04)
     }
 }
 
-.dropUpHome{
+.dropUpHome {
     grid-column: 3/3;
     grid-row: 1/2;
     display: flex;
     justify-content: end;
-    margin-top: -15px;
+    margin-top: -18px;
     margin-right: 20px;
 
 }

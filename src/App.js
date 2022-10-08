@@ -12,14 +12,22 @@ function App() {
 
     <BrowserRouter>
       <div className="App">
-        <NavBar />
 
-        <Routes>
-          <Route path="/" element={<ItemListContainer title="Item List Container" />} />
-          <Route path="/detail" element={<ItemDetailContainer />} />
-        </Routes>
+        <header>
+          <NavBar />
+        </header>
 
-        <Footer />
+        <main>
+          <Routes>
+            <Route path="/" element={<ItemListContainer title="Item List Container" />} />
+            <Route path="/detail" element={<ItemDetailContainer />} />
+          </Routes>
+        </main>
+
+        <footer>
+          <Footer />
+        </footer>
+        
       </div>
     </BrowserRouter>
   );

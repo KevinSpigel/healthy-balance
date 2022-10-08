@@ -1,0 +1,30 @@
+.headerDiv {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row: 2;
+}
+
+.cartDiv {
+    grid-column: 3/3;
+    grid-row: 1/2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 55px;
+    margin-left: 50px;
+}
+
+.imgLogo {
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+.itemsDiv {
+    grid-column: 2/3;
+    grid-row: 2/2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 5px;
+}
