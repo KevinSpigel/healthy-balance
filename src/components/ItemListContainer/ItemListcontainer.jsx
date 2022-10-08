@@ -3,6 +3,10 @@ import '../ItemListContainer/ItemListContainerStyles/ItemListContainerStyles.css
 import { productsDataBase } from '../dataBase/dataBase';
 import { useEffect, useState } from 'react';
 import { ItemList } from '../ItemList/ItemList';
+
+import Button from 'react-bootstrap/Button';
+import Spinner from 'react-bootstrap/Spinner';
+
 import { Link } from 'react-router-dom'; // el componente Link reemplazará las etiquetas a
 
 
@@ -40,7 +44,19 @@ export const ItemListContainer = ({ title }) => {
         <div>
             <div>{title}</div>
             {
-                loading ? <p> Loading...</p>
+                loading ?
+                    <div>
+                        <Button variant="primary" disabled>
+                            <Spinner
+                                as="span"
+                                animation="grow"
+                                size="sm"
+                                role="status"
+                                aria-hidden="true"
+                            />
+                            Loading...
+                        </Button>
+                    </div>
                     :
                     <ItemList items={productList} />
             }

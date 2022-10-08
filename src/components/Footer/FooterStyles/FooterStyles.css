@@ -1,1 +1,101 @@
-/* No CSS *//*# sourceMappingURL=FooterStyles.css.map */
+footer {
+  background-color: #fff8f5;
+}
+
+.footerDiv {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: 2;
+      grid-template-rows: 2;
+}
+
+.divIcon {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.divIcon p {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.divIcon img {
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  border-radius: 50%;
+  -webkit-box-shadow: 2px 2px 2px #c8c8c8;
+          box-shadow: 2px 2px 2px #c8c8c8;
+}
+
+.divIcon img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.signatureFooter {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 2;
+  grid-row: 2/2;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-size: small;
+}
+
+.dropup {
+  -ms-grid-column: 3;
+  grid-column: 3/3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 50px;
+  width: 40px;
+  background-color: rgba(192, 189, 189, 0.347);
+  border-radius: 10%;
+}
+
+.dropup button {
+  border: none;
+}
+
+.dropup:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.dropUpHome {
+  -ms-grid-column: 3;
+  grid-column: 3/3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  margin-top: -15px;
+  margin-right: 20px;
+}
+/*# sourceMappingURL=FooterStyles.css.map */
