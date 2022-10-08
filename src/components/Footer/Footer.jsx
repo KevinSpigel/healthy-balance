@@ -6,6 +6,17 @@ import WpIcon from '../../assets/socialNetworksIcon/whatsapp.png';
 
 
 export const Footer = () => {
+
+
+    const scrollButton = () => {
+        window.scrollTo(
+            {
+                top: 0,
+                behavior: 'smooth'
+            });
+    }
+
+
     return (
         <footer className="footerDiv">
             <div className="divIcon">
@@ -27,7 +38,7 @@ export const Footer = () => {
 
             <div className="dropUpHome">
                 <div className="dropup">
-                    <button href="#home" className="btn dropdown-toggle" ></button>
+                    <button onClick={scrollButton} className="btn dropdown-toggle" ></button>
                 </div>
             </div>
 

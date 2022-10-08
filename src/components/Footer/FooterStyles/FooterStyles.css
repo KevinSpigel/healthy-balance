@@ -69,9 +69,9 @@ footer {
       -ms-flex-pack: center;
           justify-content: center;
   height: 50px;
-  width: 40px;
+  width: 35px;
   background-color: rgba(192, 189, 189, 0.347);
-  border-radius: 10%;
+  border-radius: 5%;
 }
 
 .dropup button {
