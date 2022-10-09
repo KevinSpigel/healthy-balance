@@ -1,1 +1,14 @@
-/* No CSS *//*# sourceMappingURL=ItemDetailStyles.css.map */
+.detailDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 200px;
+}
+/*# sourceMappingURL=ItemDetailStyles.css.map */
