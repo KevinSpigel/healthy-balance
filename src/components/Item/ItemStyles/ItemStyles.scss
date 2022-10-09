@@ -1,5 +1,23 @@
+.itemDiv{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 70px;
+}
+
+.cardDiv{
+    width: 30vh;
+    box-shadow: 2px 2px 2px grey;
+
+}
+
 .imgProducts{
     width: 200px;
     height: 200px;
     border-radius: 5%;
+}
+
+.headerDiv {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row: 2;
 }

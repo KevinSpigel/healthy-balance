@@ -1,5 +1,6 @@
 footer {
   background-color: #fff8f5;
+  margin-top: 50px;
 }
 
 .footerDiv {
@@ -25,8 +26,10 @@ footer {
 }
 
 .divIcon p {
+  padding: 15px;
   margin-top: 10px;
-  margin-bottom: 5px;
+  margin-bottom: 0px;
+  border-top: solid 2px rgba(128, 128, 128, 0.186);
 }
 
 .divIcon img {
@@ -54,6 +57,7 @@ footer {
       -ms-flex-direction: row;
           flex-direction: row;
   font-size: small;
+  margin-top: 10px;
 }
 
 .dropup {

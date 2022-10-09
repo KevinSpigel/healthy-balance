@@ -1,5 +1,6 @@
 footer {
     background-color: #fff8f5;
+    margin-top: 50px;
 }
 
 .footerDiv {
@@ -14,8 +15,11 @@ footer {
     flex-direction: row;
 
     p {
+        
+        padding: 15px;
         margin-top: 10px;
-        margin-bottom: 5px;
+        margin-bottom: 0px;
+        border-top: solid 2px rgba(128, 128, 128, 0.186) ;
     }
 
     img {
@@ -36,6 +40,7 @@ footer {
     grid-row: 2/2;
     flex-direction: row;
     font-size: small;
+    margin-top: 10px;
 }
 
 .dropup {
