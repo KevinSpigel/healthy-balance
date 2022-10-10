@@ -9,6 +9,17 @@ import { Link, NavLink } from 'react-router-dom';
 
 
 export function NavBar() {
+
+
+    const contactButton = () => {
+        window.scrollTo(
+            {
+                top:10000,
+                behavior: 'smooth'
+            });
+    }
+
+
     return (
         <div className="headerDiv">
 
@@ -27,6 +38,7 @@ export function NavBar() {
                                 <Nav.Link ><NavLink className={({ isActive }) => isActive === true ? 'activeClass' : 'inactiveClass'} to="/category/Congelados">Congelados</NavLink></Nav.Link>
                                 <Nav.Link ><NavLink className={({ isActive }) => isActive === true ? 'activeClass' : 'inactiveClass'} to="/category/QuienesSomos">¿Quiénes Somos?</NavLink></Nav.Link>
                                 <Nav.Link ><NavLink className={({ isActive }) => isActive === true ? 'activeClass' : 'inactiveClass'} to="/category/TipsSaludables">Tips Saludables</NavLink></Nav.Link>
+                                <Nav.Link onClick={contactButton}><NavLink  className={({ isActive }) => isActive === true ? 'activeClass' : 'inactiveClass'}>Contacto</NavLink></Nav.Link>
                             </Nav>
                         </Navbar.Collapse>
                     </Container>
