@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "AAAA,AAAA,WAAW,CAAA;EACX,OAAO,EAAE,IAAI;EACb,SAAS,EAAE,GAAG;EACd,eAAe,EAAE,MAAM;CACtB",
     "sources": [
         "ItemCountStyles.scss"
     ],
