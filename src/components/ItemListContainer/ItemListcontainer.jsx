@@ -47,7 +47,7 @@ export const ItemListContainer = ({ }) => {
 
 
     return (
-        <div>
+        <div className="itemListContainerDiv">
             {
                 loading ?
                     <div>

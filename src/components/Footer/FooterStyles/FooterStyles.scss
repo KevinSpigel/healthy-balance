@@ -1,12 +1,9 @@
-footer {
-    background-color: #fff8f5;
-    margin-top: 50px;
-}
 
 .footerDiv {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 2;
+    background-color: rgba(128, 128, 128, 0.105);
 }
 
 .divIcon {

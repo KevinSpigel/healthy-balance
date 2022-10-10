@@ -1,3 +1,7 @@
+.NavbarDiv {
+    background-color: #fff8f5
+}
+
 .headerDiv {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -21,8 +25,6 @@
 }
 
 .itemsDiv {
-    grid-column: 2/3;
-    grid-row: 2/2;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,12 +32,14 @@
     margin-top: 5px;
 }
 
-.activeClass{
+
+
+.activeClass {
     color: red;
-    border-color: 2px solid rgb(116, 0, 116) ;
+    border-color: 2px solid rgb(116, 0, 116);
     border-bottom-width: thick;
 }
 
-.inactiveClass{
+.inactiveClass {
     color: black;
 }

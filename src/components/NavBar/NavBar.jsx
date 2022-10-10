@@ -14,19 +14,25 @@ export function NavBar() {
     const contactButton = () => {
         window.scrollTo(
             {
-                top:10000,
+                top: 10000,
                 behavior: 'smooth'
             });
     }
 
 
     return (
-        <div className="headerDiv">
+        <div className="NavbarDiv">
 
-            <div className="imgLogo">
-                <Link to="/"><img src={Logo} alt="Logo" width={150} /></Link>
+            <div className="headerDiv">
+                <div className="imgLogo">
+                    <Link to="/"><img src={Logo} alt="Logo" width={150} /></Link>
+                </div>
+
+                <div className="cartDiv">
+                    <CartWidget />
+                </div>
+
             </div>
-
             <div className="itemsDiv">
                 <Navbar expand="lg">
                     <Container>
@@ -38,7 +44,7 @@ export function NavBar() {
                                 <Nav.Link ><NavLink className={({ isActive }) => isActive === true ? 'activeClass' : 'inactiveClass'} to="/category/Congelados">Congelados</NavLink></Nav.Link>
                                 <Nav.Link ><NavLink className={({ isActive }) => isActive === true ? 'activeClass' : 'inactiveClass'} to="/category/QuienesSomos">¿Quiénes Somos?</NavLink></Nav.Link>
                                 <Nav.Link ><NavLink className={({ isActive }) => isActive === true ? 'activeClass' : 'inactiveClass'} to="/category/TipsSaludables">Tips Saludables</NavLink></Nav.Link>
-                                <Nav.Link onClick={contactButton}><NavLink  className={({ isActive }) => isActive === true ? 'activeClass' : 'inactiveClass'}>Contacto</NavLink></Nav.Link>
+                                <Nav.Link onClick={contactButton}><NavLink className={({ isActive }) => isActive === true ? 'activeClass' : 'inactiveClass'}>Contacto</NavLink></Nav.Link>
                             </Nav>
                         </Navbar.Collapse>
                     </Container>
@@ -46,7 +52,6 @@ export function NavBar() {
                 </Navbar>
             </div>
 
-            <div className="cartDiv"><CartWidget /></div>
         </div>
     );
 };

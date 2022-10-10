@@ -1,22 +1,19 @@
-.itemDiv{
+.itemDiv {
     display: flex;
     justify-content: space-around;
     margin-top: 70px;
 }
 
-.cardDiv{
-    width: 30vh;
+.cardDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45vh;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.imgProducts{
+.imgProducts {
     width: 200px;
     height: 200px;
     border-radius: 5%;
-}
-
-.headerDiv {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-row: 2;
 }
