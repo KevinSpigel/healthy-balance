@@ -20,11 +20,13 @@
   width: 45vh;
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  gap: 15px;
 }
 
 .imgProducts {
-  width: 200px;
-  height: 200px;
+  width: 95%;
+  height: 95%;
+  margin-top: 10px;
   border-radius: 5%;
 }
 /*# sourceMappingURL=ItemStyles.css.map */

@@ -26,7 +26,7 @@ export const ItemDetail = ({ item }) => {
                 </Card>
 
                 <Card className="cardDiv">
-                    <Card.Img src={item.imgProduct} alt={item.name} />
+                    <Card.Img className="imgProducts" src={item.imgProduct} alt={item.name} />
                     <Card.Body >
                         <Card.Title>{item.name} - ${item.price}</Card.Title>
                         <Card.Text>

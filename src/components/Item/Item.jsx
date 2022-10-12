@@ -12,7 +12,7 @@ export const Item = ({ item }) => {
 
         <div className="itemDiv">
             <Card className="cardDiv">
-                <Card.Img src={item.imgProduct} alt={item.name} />
+                <Card.Img className="imgProducts" src={item.imgProduct} alt={item.name} />
                 <Card.Body >
                     <Card.Title>{item.name} - ${item.price}</Card.Title>
                     <Link to={`/item/${item.id}`}><Button variant="primary">Ver detalle</Button></Link>
