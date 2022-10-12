@@ -15,7 +15,6 @@ export const Item = ({ item }) => {
                 <Card.Img src={item.imgProduct} alt={item.name} />
                 <Card.Body >
                     <Card.Title>{item.name} - ${item.price}</Card.Title>
-                    <ItemCount />
                     <Link to={`/item/${item.id}`}><Button variant="primary">Ver detalle</Button></Link>
                 </Card.Body>
             </Card>
