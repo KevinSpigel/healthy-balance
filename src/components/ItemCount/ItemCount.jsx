@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 
-export function ItemCount() {
+export function ItemCount(onAdd) {
 
     const [product, demandedProduct] = useState(1)
 
@@ -23,15 +23,14 @@ export function ItemCount() {
     };
 
 
-
     return (
         <div >
             <div className="counterDiv">
-            <button onClick={removeProduct}>-</button>
-            <div>{product}</div>
-            <button onClick={addProduct} >+</button>
+                <button onClick={removeProduct}>-</button>
+                <div>{product}</div>
+                <button onClick={addProduct} >+</button>
             </div>
-            <button>Add to {<FontAwesomeIcon className="fa-1x" icon={faCartShopping} />}</button>
+            <button onClick={()=>onAdd(product)}>Add to {<FontAwesomeIcon className="fa-1x" icon={faCartShopping} />}</button>
         </div>
     )
 
