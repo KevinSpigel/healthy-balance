@@ -1,6 +1,6 @@
 .NavbarDiv {
     background-color: rgba(240, 162, 240, 0.259);
-    padding: 30px;
+    padding: 10px;
 }
 
 .headerDiv {
@@ -23,6 +23,15 @@
     grid-column: 2/3;
     grid-row: 1/2;
     margin-top: 20px;
+
+    img {
+        transition: 0.4s;
+
+        &:hover {
+            transition: 0.4s;
+            transform: scale(1.1)
+        }
+    }
 }
 
 .itemsDiv {

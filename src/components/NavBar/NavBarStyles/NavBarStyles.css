@@ -1,6 +1,6 @@
 .NavbarDiv {
   background-color: rgba(240, 162, 240, 0.259);
-  padding: 30px;
+  padding: 10px;
 }
 
 .headerDiv {
@@ -39,6 +39,18 @@
   -ms-grid-row-span: 1;
   grid-row: 1/2;
   margin-top: 20px;
+}
+
+.imgLogo img {
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.imgLogo img:hover {
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .itemsDiv {

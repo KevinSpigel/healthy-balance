@@ -6,12 +6,16 @@
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .cart-button:hover {
   background-color: rgba(116, 0, 116, 0.574);
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .bubble {
