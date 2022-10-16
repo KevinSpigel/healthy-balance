@@ -1,16 +1,22 @@
 .cart-button {
   border: none;
-  background-color: transparent;
+  border-radius: 25%;
+  padding: 10px;
+  background-color: rgba(116, 0, 116, 0.435);
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  color: white;
+}
+
+.cart-button:hover {
+  background-color: rgba(116, 0, 116, 0.574);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .bubble {
-  text-align: center;
-  padding: 3px;
-  font-size: x-small;
-  color: white;
-  background-color: #d00303;
-  border-radius: 50%;
-  -webkit-box-shadow: 1px 1px 1px #bebebe;
-          box-shadow: 1px 1px 1px #bebebe;
+  padding: 5px;
+  font-size: medium;
+  color: #fff8f5;
 }
 /*# sourceMappingURL=CartWidgetStyles.css.map */

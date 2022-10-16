@@ -37,7 +37,7 @@ export function NavBar() {
                 <Navbar expand="lg">
                     <Container className="containerDiv">
                         <Navbar.Toggle aria-controls="basic-navbar-nav" className="toogleBorder" />
-                        <Navbar.Collapse id="basic-navbar-nav">
+                        <Navbar.Collapse id="basic-navbar-nav" >
                             <Nav className="me-auto grid gap-4">
                                 <Nav.Link ><NavLink className={({ isActive }) => isActive === true ? 'activeClass' : 'inactiveClass'} to="/Home">Home</NavLink></Nav.Link>
                                 <Nav.Link ><NavLink className={({ isActive }) => isActive === true ? 'activeClass' : 'inactiveClass'} to="/category/Hamburguesas">Hamburguesas</NavLink></Nav.Link>
@@ -48,7 +48,6 @@ export function NavBar() {
                             </Nav>
                         </Navbar.Collapse>
                     </Container>
-
                 </Navbar>
             </div>
 

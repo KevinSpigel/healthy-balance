@@ -1,14 +1,20 @@
-.cart-button{
+.cart-button {
     border: none;
-    background-color: transparent;
+    border-radius: 25%;
+    padding: 10px;
+    background-color: rgba(116, 0, 116, 0.435);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    color: white;
+
+    &:hover {
+        background-color: rgba(116, 0, 116, 0.574);
+        transform: scale(1.1)
+    }
 }
 
-.bubble{
-    text-align: center;
-    padding: 3px;
-    font-size: x-small;
-    color: white;
-    background-color: rgb(208, 3, 3);
-    border-radius: 50% ;
-    box-shadow: 1px 1px 1px rgb(190, 190, 190);
+
+.bubble {
+    padding: 5px;
+    font-size: medium;
+    color: #fff8f5;
 }

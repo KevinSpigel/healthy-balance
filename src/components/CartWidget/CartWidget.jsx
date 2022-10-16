@@ -12,7 +12,7 @@ export const CartWidget = () => {
 
     return (
         <div>
-            <Link to={"/Cart"}> <button className="cart-button mx-3"><FontAwesomeIcon className="fa-2x" icon={faCartShopping} />
+            <Link to={"/Cart"}> <button className="cart-button"><FontAwesomeIcon className="fa-2xl" icon={faCartShopping} />
 
                 <span className="bubble">
                     {cartProducts.length}
