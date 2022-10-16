@@ -30,8 +30,8 @@
 }
 
 .counterButton {
-  background-color: rgba(116, 0, 116, 0.435);
-  border: rgba(116, 0, 116, 0.435);
+  background-color: rgba(116, 0, 116, 0.435) !important;
+  border: rgba(116, 0, 116, 0.435) !important;
 }
 
 .counterButton:hover {
