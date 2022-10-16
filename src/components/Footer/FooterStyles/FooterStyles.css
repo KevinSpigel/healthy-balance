@@ -35,11 +35,15 @@
   border-radius: 50%;
   -webkit-box-shadow: 2px 2px 2px #c8c8c8;
           box-shadow: 2px 2px 2px #c8c8c8;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
 }
 
 .divIcon img:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .signatureFooter {
@@ -72,6 +76,8 @@
   width: 35px;
   background-color: rgba(187, 184, 184, 0.499);
   border-radius: 5%;
+  margin-left: 65%;
+  margin-top: -18px;
 }
 
 .dropup button {
@@ -81,21 +87,5 @@
 .dropup:hover {
   -webkit-transform: scale(1.04);
           transform: scale(1.04);
-}
-
-.dropUpHome {
-  -ms-grid-column: 3;
-  grid-column: 3/3;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
-  grid-row: 1/2;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
-  margin-top: -18px;
-  margin-right: 20px;
 }
 /*# sourceMappingURL=FooterStyles.css.map */

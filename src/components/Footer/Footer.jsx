@@ -36,11 +36,11 @@ export const Footer = () => {
                     src={IgIcon} alt="Instagram icon" /></a>
             </div>
 
-            <div className="dropUpHome">
-                <div className="dropup">
-                    <button onClick={scrollButton} className="btn dropdown-toggle" ></button>
-                </div>
+
+            <div className="dropup">
+                <button onClick={scrollButton} className="btn dropdown-toggle" ></button>
             </div>
+
 
             <div className="signatureFooter"> &copy; 2022 - Developed by Kevin Spigel</div>
 

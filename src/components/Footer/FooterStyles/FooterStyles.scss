@@ -25,9 +25,12 @@
         margin: 7px;
         border-radius: 50%;
         box-shadow: 2px 2px 2px rgb(200, 200, 200);
+        transition: 0.1s;
 
         &:hover {
-            transform: scale(1.1)
+            transform: scale(1.1);
+            transition: 0.4s;
+
         }
     }
 }
@@ -49,6 +52,8 @@
     width: 35px;
     background-color: rgba(187, 184, 184, 0.499);
     border-radius: 5%;
+    margin-left: 65%;
+    margin-top: -18px;
 
 
     button {
@@ -58,14 +63,4 @@
     &:hover {
         transform: scale(1.04)
     }
-}
-
-.dropUpHome {
-    grid-column: 3/3;
-    grid-row: 1/2;
-    display: flex;
-    justify-content: end;
-    margin-top: -18px;
-    margin-right: 20px;
-
 }
