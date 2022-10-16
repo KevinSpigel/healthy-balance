@@ -3,6 +3,8 @@ import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 
+import Button from 'react-bootstrap/Button';
+
 
 export function ItemCount({onAdd}) {
 
@@ -26,13 +28,13 @@ export function ItemCount({onAdd}) {
 
 
     return (
-        <div >
+        <div className="d-flex flex-column align-items-center">
             <div className="counterDiv">
-                <button onClick={removeProduct}>-</button>
+                <button className="btn btn-primary rounded-circle counterButton" onClick={removeProduct}>-</button>
                 <div>{product}</div>
-                <button onClick={addProduct} >+</button>
+                <button className="btn btn-primary rounded-circle btn-lg counterButton" onClick={addProduct} >+</button>
             </div>
-            <button onClick={() => onAdd(product)}>Add to {<FontAwesomeIcon className="fa-1x" icon={faCartShopping} />}</button>
+            <Button className="mt-3 counterButton" variant="primary" onClick={() => onAdd(product)}>Add to {<FontAwesomeIcon className="fa-1x" icon={faCartShopping} />}</Button>
         </div>
     )
 

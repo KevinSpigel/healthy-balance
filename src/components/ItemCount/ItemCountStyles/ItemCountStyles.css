@@ -9,5 +9,32 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(226, 226, 226, 0.369);
+  border-radius: 20px;
+}
+
+.counterDiv div {
+  padding: 6px 20px;
+  font-size: large;
+  font-weight: 700;
+}
+
+.counterDiv div:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.counterButton {
+  background-color: rgba(116, 0, 116, 0.435);
+  border: rgba(116, 0, 116, 0.435);
+}
+
+.counterButton:hover {
+  background-color: rgba(116, 0, 116, 0.574) !important;
 }
 /*# sourceMappingURL=ItemCountStyles.css.map */

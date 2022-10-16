@@ -1,5 +1,28 @@
-.counterDiv{
-display: flex;
-flex-flow: row;
-justify-content: center;
+.counterDiv {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(226, 226, 226, 0.369);
+    border-radius: 20px;
+
+    div {
+        padding: 6px 20px;
+        font-size: large;
+        font-weight: 700;
+
+        &:hover {
+            transform: scale(1.2);
+            transition: 0.4s;
+        }
+    }
+}
+
+.counterButton {
+    background-color: rgba(116, 0, 116, 0.435);
+    border: rgba(116, 0, 116, 0.435);
+
+    &:hover {
+        background-color: rgba(116, 0, 116, 0.574) !important;
+    }
 }
