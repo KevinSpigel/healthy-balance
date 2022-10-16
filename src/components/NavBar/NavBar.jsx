@@ -25,7 +25,7 @@ export function NavBar() {
 
             <div className="headerDiv">
                 <div className="imgLogo">
-                    <Link to="/"><img src={Logo} alt="Logo" width={150} /></Link>
+                    <Link to="/Home"><img src={Logo} alt="Logo" width={150} /></Link>
                 </div>
 
                 <div className="cartDiv">
@@ -35,16 +35,16 @@ export function NavBar() {
             </div>
             <div className="itemsDiv">
                 <Navbar expand="lg">
-                    <Container>
-                        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                    <Container className="containerDiv">
+                        <Navbar.Toggle aria-controls="basic-navbar-nav" className="toogleBorder" />
                         <Navbar.Collapse id="basic-navbar-nav">
-                            <Nav className="me-auto grid gap-4 ">
-                                <Nav.Link className="ms-5" ><Link to="/">Home</Link></Nav.Link>
+                            <Nav className="me-auto grid gap-4">
+                                <Nav.Link ><NavLink className={({ isActive }) => isActive === true ? 'activeClass' : 'inactiveClass'} to="/Home">Home</NavLink></Nav.Link>
                                 <Nav.Link ><NavLink className={({ isActive }) => isActive === true ? 'activeClass' : 'inactiveClass'} to="/category/Hamburguesas">Hamburguesas</NavLink></Nav.Link>
                                 <Nav.Link ><NavLink className={({ isActive }) => isActive === true ? 'activeClass' : 'inactiveClass'} to="/category/Congelados">Congelados</NavLink></Nav.Link>
                                 <Nav.Link ><NavLink className={({ isActive }) => isActive === true ? 'activeClass' : 'inactiveClass'} to="/category/QuienesSomos">¿Quiénes Somos?</NavLink></Nav.Link>
                                 <Nav.Link ><NavLink className={({ isActive }) => isActive === true ? 'activeClass' : 'inactiveClass'} to="/category/TipsSaludables">Tips Saludables</NavLink></Nav.Link>
-                                <Nav.Link onClick={contactButton}><NavLink className={({ isActive }) => isActive === true ? 'activeClass' : 'inactiveClass'}>Contacto</NavLink></Nav.Link>
+                                <Nav.Link onClick={contactButton}><NavLink className={({ noActive }) => noActive === true ? 'activeClass' : 'inactiveClass'}>Contacto</NavLink></Nav.Link>
                             </Nav>
                         </Navbar.Collapse>
                     </Container>

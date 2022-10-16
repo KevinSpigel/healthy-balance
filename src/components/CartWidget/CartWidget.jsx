@@ -8,14 +8,14 @@ import { useContext } from 'react';
 
 export const CartWidget = () => {
 
-    const {cartProducts} = useContext(CartContext);
+    const { cartProducts } = useContext(CartContext);
 
     return (
         <div>
-            <Link to={"/cart"}> <button className="cart-button mx-3"><FontAwesomeIcon className="fa-2x" icon={faCartShopping} />
+            <Link to={"/Cart"}> <button className="cart-button mx-3"><FontAwesomeIcon className="fa-2x" icon={faCartShopping} />
 
                 <span className="bubble">
-                    {cartProducts.length} 
+                    {cartProducts.length}
                 </span>
             </button></Link>
         </div>

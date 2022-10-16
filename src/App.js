@@ -23,12 +23,12 @@ function App() {
 
           <main>
             <Routes>
-              <Route path="/" element={<ItemListContainer />} />
+              <Route path="/Home" element={<ItemListContainer />} />
               <Route path="/category/:categoryId" element={<ItemListContainer />} />
               <Route path="/item/:id" element={<ItemDetailContainer />} />
               <Route path="/QuienesSomos" element={<ItemListContainer />} />
               <Route path="/TipsSaludables" element={<ItemListContainer />} />
-              <Route path="/cart" element={<Cart />} />
+              <Route path="/Cart" element={<Cart />} />
             </Routes>
           </main>
 

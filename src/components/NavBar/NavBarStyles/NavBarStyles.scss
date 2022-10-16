@@ -1,5 +1,6 @@
 .NavbarDiv {
-    background-color: #fff8f5
+    background-color: rgba(240, 162, 240, 0.259);
+    padding: 30px;
 }
 
 .headerDiv {
@@ -29,17 +30,35 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-top: 5px;
+    margin-top: 25px;
 }
 
-
+.containerDiv {
+    background-color: rgba(116, 0, 116, 0.435);
+    border-radius: 10px;
+    padding: 5px;
+}
 
 .activeClass {
-    color: red;
-    border-color: 2px solid rgb(116, 0, 116);
-    border-bottom-width: thick;
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: #d0cbc9;
+
+    &:hover {
+        color: #fff8f5;
+    }
 }
 
 .inactiveClass {
-    color: black;
+    text-decoration: none;
+    font-size: large;
+    color: #fff8f5;
+
+    &:hover {
+        color: #d0cbc9;
+    }
+}
+
+.toogleBorder {
+    border: none
 }
