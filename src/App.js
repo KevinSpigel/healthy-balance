@@ -6,19 +6,16 @@ import { Cart } from './components/Cart/Cart';
 import { Footer } from './components/Footer/Footer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import { CartContext } from './context/CartContext';
+import { CustomProvider } from './context/CartContext';
 
 
 
 function App() {
 
   return (
-
-    <BrowserRouter>
-      <div className="App">
-
-        <CartContext.Provider value={{}}>
-
+    <CustomProvider>
+      <BrowserRouter>
+        <div className="App">
 
           <header>
             <NavBar />
@@ -35,15 +32,13 @@ function App() {
             </Routes>
           </main>
 
+          <footer>
+            <Footer />
+          </footer>
 
-        </CartContext.Provider>
-
-        <footer>
-          <Footer />
-        </footer>
-
-      </div>
-    </BrowserRouter>
+        </div>
+      </BrowserRouter>
+    </CustomProvider>
   );
 };
 

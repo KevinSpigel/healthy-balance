@@ -3,9 +3,11 @@ import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 
-export function ItemCount(onAdd) {
 
-    const [product, demandedProduct] = useState(1)
+export function ItemCount({onAdd}) {
+
+
+    const [product, demandedProduct] = useState(1);
 
 
     const removeProduct = () => {
@@ -30,7 +32,7 @@ export function ItemCount(onAdd) {
                 <div>{product}</div>
                 <button onClick={addProduct} >+</button>
             </div>
-            <button onClick={()=>onAdd(product)}>Add to {<FontAwesomeIcon className="fa-1x" icon={faCartShopping} />}</button>
+            <button onClick={() => onAdd(product)}>Add to {<FontAwesomeIcon className="fa-1x" icon={faCartShopping} />}</button>
         </div>
     )
 

@@ -3,19 +3,21 @@ import '../ItemDetail/ItemDetailStyles/ItemDetailStyles.css';
 import { ItemCount } from '../ItemCount/ItemCount';
 
 import Card from 'react-bootstrap/Card';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
+import { CartContext } from '../../context/CartContext';
 
 
 
 export const ItemDetail = ({ item }) => {
 
-    const [totalCart, setTotalCart] = useState();
+    const {addProductToCart} = useContext(CartContext);
+
+    const [totalCart, setTotalCart] = useState(1);
 
     const addToCart = (productsToCart) => {
         setTotalCart(productsToCart);
+        addProductToCart({quantity:totalCart})
     }
-
-    //I'm not showing the value of this function.
 
 
 
