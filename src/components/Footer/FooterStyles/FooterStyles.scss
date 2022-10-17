@@ -12,10 +12,11 @@
     flex-direction: row;
 
     p {
-        
+        font-size: large;
+        font-weight: 550;
         padding: 15px;
-        margin-top: 10px;
-        margin-bottom: 0px;
+        margin-top: 20px;
+        margin-bottom: -5px;
         border-top: solid 2px rgba(128, 128, 128, 0.186) ;
     }
 
@@ -29,7 +30,7 @@
 
         &:hover {
             transform: scale(1.1);
-            transition: 0.4s;
+            transition: 0.2s;
 
         }
     }
@@ -40,7 +41,7 @@
     grid-row: 2/2;
     flex-direction: row;
     font-size: small;
-    margin-top: 10px;
+    margin-top: 25px;
 }
 
 .dropup {
@@ -51,7 +52,7 @@
     height: 50px;
     width: 35px;
     background-color: rgba(187, 184, 184, 0.499);
-    border-radius: 5%;
+    border-radius: 10%;
     margin-left: 65%;
     margin-top: -18px;
 

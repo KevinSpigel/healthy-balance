@@ -21,7 +21,7 @@ export const Footer = () => {
         <footer className="footerDiv">
             <div className="divIcon">
 
-                <p>Contáctanos</p>
+                <p>Encontranos en:</p>
 
                 <a href='mailto:tuequilibriosaludable@gmail.com' target='_blank'><img src={MailIcon} alt="Icono Email" />
                 </a>
