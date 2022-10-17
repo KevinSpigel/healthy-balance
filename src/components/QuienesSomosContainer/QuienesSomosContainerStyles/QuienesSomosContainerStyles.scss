@@ -1,0 +1,43 @@
+.somosContainer {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff8f5;
+}
+
+.somosDiv {
+    display: flex;
+    justify-content: center;
+    width: 90vh;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    gap: 15px;
+    border: 1.5px solid rgba(116, 0, 116, 0.435) !important;
+    transition: 0.5s;
+    margin-bottom: 30px;
+}
+
+.imgFounderDiv {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 20px;
+
+    img {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border: 1.5px solid rgba(116, 0, 116, 0.435);
+        border-radius: 50%;
+        width: 250px;
+        height: 225px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+}
+
+.presentationDiv{
+    font-size: larger;
+}

@@ -41,8 +41,7 @@ export function NavBar() {
                             <Nav className="me-auto grid gap-4">
                                 <Nav.Link ><NavLink className={({ isActive }) => isActive === true ? 'activeClass' : 'inactiveClass'} to="/category/Hamburguesas">Hamburguesas</NavLink></Nav.Link>
                                 <Nav.Link ><NavLink className={({ isActive }) => isActive === true ? 'activeClass' : 'inactiveClass'} to="/category/Congelados">Congelados</NavLink></Nav.Link>
-                                <Nav.Link ><NavLink className={({ isActive }) => isActive === true ? 'activeClass' : 'inactiveClass'} to="/category/QuienesSomos">¿Quiénes Somos?</NavLink></Nav.Link>
-                                <Nav.Link ><NavLink className={({ isActive }) => isActive === true ? 'activeClass' : 'inactiveClass'} to="/category/TipsSaludables">Tips Saludables</NavLink></Nav.Link>
+                                <Nav.Link ><NavLink className={({ isActive }) => isActive === true ? 'activeClass' : 'inactiveClass'} to="/QuienesSomos">¿Quiénes Somos?</NavLink></Nav.Link>
                                 <Nav.Link onClick={contactButton}><NavLink className="inactiveClass">Contacto</NavLink></Nav.Link>
                             </Nav>
                         </Navbar.Collapse>
