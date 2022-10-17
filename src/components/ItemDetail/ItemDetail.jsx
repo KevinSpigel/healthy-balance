@@ -25,10 +25,10 @@ export const ItemDetail = ({ item }) => {
         <div>
             <div className="detailDiv">
 
-                <Card className="cardDiv">
+                <Card className="cardDescriptionDiv">
 
                     <Card.Body >
-                        <Card.Title>Descripción del producto</Card.Title>
+                        <Card.Title>Descripción</Card.Title>
 
                         <Card.Text>
                             {item.description}
@@ -38,7 +38,7 @@ export const ItemDetail = ({ item }) => {
                     </Card.Body>
                 </Card>
 
-                <Card className="cardDiv">
+                <Card className="cardDetailDiv">
                     <Card.Img className="imgProducts" src={item.imgProduct} alt={item.name} />
                     <Card.Body >
                         <Card.Title>{item.name} - ${item.price}</Card.Title>

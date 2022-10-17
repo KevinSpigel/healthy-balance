@@ -1,8 +1,24 @@
-.detailDiv{
+.detailDiv {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     gap: 200px;
-    padding: 25px;
+    padding: 35px;
     background-color: #fff8f5;
+}
+
+.cardDetailDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50vh;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    gap: 15px;
+    border: 1.5px solid rgba(116, 0, 116, 0.435) !important;
+    transition: 0.5s;
+}
+
+.cardDescriptionDiv{
+    @extend .cardDetailDiv;
+    width:90vh;
 }
