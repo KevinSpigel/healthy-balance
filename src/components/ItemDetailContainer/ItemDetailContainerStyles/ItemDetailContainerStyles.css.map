@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "AAAA,AAAA,uBAAuB,CAAC;EACpB,gBAAgB,EAAE,OACtB;CAAC",
+    "mappings": "AAAA,AAAA,uBAAuB,CAAC;EACpB,gBAAgB,EAAE,OACtB;CAAC;;AAED,AAAA,WAAW,CAAC;EACR,gBAAgB,EAAE,wBAAwB,CAAC,UAAU;EACrD,MAAM,EAAE,wBAAwB,CAAC,UAAU;CAC9C",
     "sources": [
         "ItemDetailContainerStyles.scss"
     ],

@@ -20,7 +20,7 @@ export const ItemListContainer = ({ }) => {
         return new Promise((resolve, reject) => {
             setTimeout(() => {
                 resolve(productsDataBase)
-            }, 2000)
+            }, 1000)
         })
     };
 
@@ -51,7 +51,7 @@ export const ItemListContainer = ({ }) => {
             {
                 loading ?
                     <div>
-                        <Button variant="primary" disabled>
+                        <Button className="loadingDiv"  variant="primary" disabled>
                             <Spinner
                                 as="span"
                                 animation="grow"
