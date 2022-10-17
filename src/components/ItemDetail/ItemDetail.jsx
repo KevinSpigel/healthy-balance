@@ -41,7 +41,7 @@ export const ItemDetail = ({ item }) => {
                 <Card className="cardDetailDiv">
                     <Card.Img className="imgProducts" src={item.imgProduct} alt={item.name} />
                     <Card.Body >
-                        <Card.Title>{item.name} - ${item.price}</Card.Title>
+                        <Card.Title className="titleDiv">{item.name} - ${item.price}</Card.Title>
                         <Card.Text>
                             <ItemCount onAdd={addToCart} />
 

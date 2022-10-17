@@ -18,7 +18,11 @@
     transition: 0.5s;
 }
 
-.cardDescriptionDiv{
+.cardDescriptionDiv {
     @extend .cardDetailDiv;
-    width:90vh;
+    width: 90vh;
+}
+
+.titleDiv {
+    margin-bottom: 20px;
 }

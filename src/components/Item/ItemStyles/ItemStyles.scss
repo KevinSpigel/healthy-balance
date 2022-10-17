@@ -1,19 +1,20 @@
 .itemDiv {
     display: flex;
     justify-content: space-around;
-    margin-top: 70px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 350px;
+    height: 500px;;
 }
 
 .cardDiv {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 45vh;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     gap: 15px;
     border: 1.5px solid rgba(116, 0, 116, 0.435) !important;
     transition: 0.5s;
-
 
     &:hover {
         transform: scale(1.05);
@@ -25,6 +26,9 @@
 .imgProducts {
     width: 95%;
     height: 95%;
-    border-radius: 5%;
-    background-position: center;   
+    object-fit: fit;
+}
+
+.titleDiv{
+margin-bottom: 20px;
 }

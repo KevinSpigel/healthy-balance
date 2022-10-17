@@ -13,7 +13,7 @@ export const Item = ({ item }) => {
             <Card className="cardDiv">
                 <Card.Img className="imgProducts" src={item.imgProduct} alt={item.name} />
                 <Card.Body >
-                    <Card.Title>{item.name} - ${item.price}</Card.Title>
+                    <Card.Title className="titleDiv">{item.name} - ${item.price}</Card.Title>
                     <Link to={`/item/${item.id}`}><Button className="counterButton" variant="primary">Ver detalle</Button></Link>
                 </Card.Body>
             </Card>
