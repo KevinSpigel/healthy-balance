@@ -40,7 +40,7 @@ export const ItemDetailContainer = () => {
         <div className="itemDetailContainerDiv">
             {
                 loading ?
-                    <div>
+                    <div className="loaderContainer">
                         <Button className="loadingDiv" variant="primary" disabled>
                             <Spinner
                                 as="span"

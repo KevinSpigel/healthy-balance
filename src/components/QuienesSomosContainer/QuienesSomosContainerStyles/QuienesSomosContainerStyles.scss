@@ -1,6 +1,6 @@
 .somosContainer {
     display: flex;
-    flex-flow: column;
+    flex-flow: column wrap;
     justify-content: center;
     align-items: center;
     background-color: #fff8f5;
@@ -9,6 +9,7 @@
 .somosDiv {
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 90vh;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     gap: 15px;
@@ -38,6 +39,33 @@
 
 }
 
-.presentationDiv{
+.presentationDiv {
     font-size: larger;
 }
+
+
+@media screen and (max-width: 991px) {
+    .somosContainer {
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    .somosDiv {
+        width: 70vh;
+    }
+
+
+    .imgFounderDiv {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 0px;
+
+        img {
+            margin-bottom: 20px;
+        }
+
+    }
+
+}
+
+

@@ -6,4 +6,11 @@
   background-color: rgba(116, 0, 116, 0.435) !important;
   border: rgba(116, 0, 116, 0.435) !important;
 }
+
+.loaderContainer {
+  height: 850px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
 /*# sourceMappingURL=ItemListContainerStyles.css.map */

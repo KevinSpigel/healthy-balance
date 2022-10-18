@@ -94,6 +94,6 @@
 }
 
 .toogleBorder {
-  border: none;
+  border: none !important;
 }
 /*# sourceMappingURL=NavBarStyles.css.map */

@@ -50,7 +50,7 @@ export const ItemListContainer = ({ }) => {
         <div className="itemListContainerDiv">
             {
                 loading ?
-                    <div>
+                    <div className="loaderContainer">
                         <Button className="loadingDiv"  variant="primary" disabled>
                             <Spinner
                                 as="span"
