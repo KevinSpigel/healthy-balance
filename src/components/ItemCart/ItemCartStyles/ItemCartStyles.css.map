@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,qBAAqB,CAAC;EAClB,gBAAgB,EAAE,OAAO;CAC5B",
-    "sources": [
-        "ItemCartStyles.scss"
-    ],
-    "names": [],
-    "file": "ItemCartStyles.css"
-}
