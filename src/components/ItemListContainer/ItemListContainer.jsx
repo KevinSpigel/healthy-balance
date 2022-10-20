@@ -1,6 +1,6 @@
 import '../ItemListContainer/ItemListContainerStyles/ItemListContainerStyles.css';
 
-import { collection, doc, getDoc } from 'firebase/firestore';
+import { collection, doc, getDoc, getDocs, query, where } from 'firebase/firestore';
 import { db } from '../../utils/firebase';
 
 import { productsDataBase } from '../dataBase/dataBase';
