@@ -1,5 +1,8 @@
 import '../ItemListContainer/ItemListContainerStyles/ItemListContainerStyles.css';
 
+import { collection, doc, getDoc } from 'firebase/firestore';
+import { db } from '../../utils/firebase';
+
 import { productsDataBase } from '../dataBase/dataBase';
 import { useEffect, useState } from 'react';
 import { ItemList } from '../ItemList/ItemList';
@@ -51,7 +54,7 @@ export const ItemListContainer = ({ }) => {
             {
                 loading ?
                     <div className="loaderContainer">
-                        <Button className="loadingDiv"  variant="primary" disabled>
+                        <Button className="loadingDiv" variant="primary" disabled>
                             <Spinner
                                 as="span"
                                 animation="grow"
