@@ -2,6 +2,17 @@
     background-color: #fff8f5
 }
 
+.itemDetailLoader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff8f5;
+
+    .loaderContainer {
+        margin-top: 20px;
+    }
+}
+
 .loadingDiv {
     background-color: rgba(116, 0, 116, 0.435) !important;
     border: rgba(116, 0, 116, 0.435) !important;

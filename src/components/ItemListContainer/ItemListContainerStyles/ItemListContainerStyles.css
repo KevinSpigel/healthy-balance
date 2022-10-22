@@ -2,6 +2,16 @@
   background-color: #fff8f5;
 }
 
+.itemListLoader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff8f5;
+}
+.itemListLoader .loaderContainer {
+  margin-top: 20px;
+}
+
 .loadingDiv {
   background-color: rgba(116, 0, 116, 0.435) !important;
   border: rgba(116, 0, 116, 0.435) !important;
@@ -12,5 +22,4 @@
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  margin-top: 20px;
 }/*# sourceMappingURL=ItemListContainerStyles.css.map */

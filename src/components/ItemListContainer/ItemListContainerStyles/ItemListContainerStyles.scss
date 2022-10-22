@@ -2,12 +2,16 @@
     background-color: #fff8f5
 }
 
-// .itemListLoader{
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     background-color: #fff8f5
-// }
+.itemListLoader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff8f5;
+
+    .loaderContainer {
+        margin-top: 20px;
+    }
+}
 
 .loadingDiv {
     background-color: rgba(116, 0, 116, 0.435) !important;
@@ -15,8 +19,7 @@
 
 }
 
-.loaderContainer{
-    height:850px;
+.loaderContainer {
+    height: 850px;
     width: fit-content;
-    margin-top: 20px;
 }

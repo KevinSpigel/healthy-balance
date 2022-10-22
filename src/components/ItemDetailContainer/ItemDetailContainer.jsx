@@ -37,7 +37,7 @@ export const ItemDetailContainer = () => {
 
 
     return (
-        <div className="itemDetailContainerDiv">
+        <div className={loading ? 'itemDetailLoader' : 'itemDetailContainerDiv'}>
             {
                 loading ?
                     <div className="loaderContainer">

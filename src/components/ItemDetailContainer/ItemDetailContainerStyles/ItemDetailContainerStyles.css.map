@@ -1,1 +1,1 @@
-{"version":3,"sources":["ItemDetailContainerStyles.scss","ItemDetailContainerStyles.css"],"names":[],"mappings":"AAAA;EACI,yBAAA;ACCJ;;ADEA;EACI,qDAAA;EACA,2CAAA;ACCJ","file":"ItemDetailContainerStyles.css"}
+{"version":3,"sources":["ItemDetailContainerStyles.scss","ItemDetailContainerStyles.css"],"names":[],"mappings":"AAAA;EACI,yBAAA;ACCJ;;ADEA;EACI,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,yBAAA;ACCJ;ADCI;EACI,gBAAA;ACCR;;ADGA;EACI,qDAAA;EACA,2CAAA;ACAJ","file":"ItemDetailContainerStyles.css"}

@@ -57,11 +57,10 @@ export const ItemListContainer = ({ }) => {
     //     getData();
 
     // }, [])
-        
+
 
     return (
-        //hacer un condicional en donde si loading es true se aplique la clase 'itemListLoader'
-        <div className="itemListContainerDiv">
+        <div className={loading ? 'itemListLoader' : 'itemListContainerDiv'}>
             {
                 loading ?
                     <div className="loaderContainer">
