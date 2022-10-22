@@ -1,9 +1,1 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,kBAAkB,CAAC;EACf,OAAO,EAAE,IAAI;EACb,qBAAqB,EAAE,cAAc;EACrC,kBAAkB,EAAE,cAAc;EAClC,GAAG,EAAE,GAAG;EACR,aAAa,EAAE,MAAM;EACrB,WAAW,EAAE,MAAM;EACnB,OAAO,EAAE,IAAI;CAChB;;AAED,MAAM,CAAC,MAAM,MAAM,SAAS,EAAE,KAAK;EAC/B,AAAA,kBAAkB,CAAC;IACf,OAAO,EAAE,IAAI;IACb,qBAAqB,EAAE,cAAc;GACxC",
-    "sources": [
-        "ItemListStyles.scss"
-    ],
-    "names": [],
-    "file": "ItemListStyles.css"
-}
+{"version":3,"sources":["ItemListStyles.scss","ItemListStyles.css"],"names":[],"mappings":"AAAA;EACI,aAAA;EACA,qCAAA;EACA,kCAAA;EACA,QAAA;EACA,qBAAA;EACA,mBAAA;EACA,aAAA;ACCJ;;ADEA;EACI;IACI,aAAA;IACA,qCAAA;ECCN;AACF","file":"ItemListStyles.css"}

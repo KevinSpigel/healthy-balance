@@ -1,9 +1,1 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,uBAAuB,CAAC;EACpB,gBAAgB,EAAE,OACtB;CAAC;;AAED,AAAA,WAAW,CAAC;EACR,gBAAgB,EAAE,wBAAwB,CAAC,UAAU;EACrD,MAAM,EAAE,wBAAwB,CAAC,UAAU;CAC9C",
-    "sources": [
-        "ItemDetailContainerStyles.scss"
-    ],
-    "names": [],
-    "file": "ItemDetailContainerStyles.css"
-}
+{"version":3,"sources":["ItemDetailContainerStyles.scss","ItemDetailContainerStyles.css"],"names":[],"mappings":"AAAA;EACI,yBAAA;ACCJ;;ADEA;EACI,qDAAA;EACA,2CAAA;ACCJ","file":"ItemDetailContainerStyles.css"}

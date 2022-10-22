@@ -49,7 +49,18 @@ export const ItemListContainer = ({ }) => {
     }, [categoryId]);
 
 
+    // useEffect(() => {
+    //     const getData = async () => {
+    //         const queryRef = collection(db, "items");
+    //         const response = await getDocs(queryRef);
+    //     }
+    //     getData();
+
+    // }, [])
+        
+
     return (
+        //hacer un condicional en donde si loading es true se aplique la clase 'itemListLoader'
         <div className="itemListContainerDiv">
             {
                 loading ?

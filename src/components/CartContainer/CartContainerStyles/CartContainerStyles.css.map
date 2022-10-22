@@ -1,9 +1,1 @@
-{
-    "version": 3,
-    "mappings": "",
-    "sources": [
-        "CartContainerStyles.scss"
-    ],
-    "names": [],
-    "file": "CartContainerStyles.css"
-}
+{"version":3,"sources":[],"names":[],"mappings":"","file":"CartContainerStyles.css"}

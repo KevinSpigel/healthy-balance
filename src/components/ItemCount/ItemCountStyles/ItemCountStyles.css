@@ -1,32 +1,19 @@
 .counterDiv {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row;
-          flex-flow: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
   background-color: rgba(226, 226, 226, 0.369);
   border-radius: 20px;
   margin-bottom: 5px;
 }
-
 .counterDiv div {
   padding: 6px 20px;
   font-size: large;
   font-weight: 700;
 }
-
 .counterDiv div:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-  -webkit-transition: 0.4s;
+  transform: scale(1.2);
   transition: 0.4s;
 }
 
@@ -34,8 +21,6 @@
   background-color: rgba(116, 0, 116, 0.435) !important;
   border: rgba(116, 0, 116, 0.435) !important;
 }
-
 .counterButton:hover {
   background-color: rgba(116, 0, 116, 0.574) !important;
-}
-/*# sourceMappingURL=ItemCountStyles.css.map */
+}/*# sourceMappingURL=ItemCountStyles.css.map */

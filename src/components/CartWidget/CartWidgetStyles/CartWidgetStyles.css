@@ -3,18 +3,13 @@
   border-radius: 25%;
   padding: 10px;
   background-color: rgba(116, 0, 116, 0.435);
-  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   color: white;
-  -webkit-transition: 0.4s;
   transition: 0.4s;
 }
-
 .cart-button:hover {
   background-color: rgba(116, 0, 116, 0.574);
-  -webkit-transform: scale(1.03);
-          transform: scale(1.03);
-  -webkit-transition: 0.4s;
+  transform: scale(1.03);
   transition: 0.4s;
 }
 
@@ -22,5 +17,4 @@
   padding: 5px;
   font-size: medium;
   color: #fff8f5;
-}
-/*# sourceMappingURL=CartWidgetStyles.css.map */
+}/*# sourceMappingURL=CartWidgetStyles.css.map */
