@@ -1,5 +1,10 @@
 import '../ItemDetailContainer/ItemDetailContainerStyles/ItemDetailContainerStyles.css';
-import { productsDataBase } from '../dataBase/dataBase';
+
+// import { productsDataBase } from '../dataBase/dataBase';
+
+import { collection, doc, getDoc } from 'firebase/firestore';
+import { db } from '../../utils/firebase';
+
 import { ItemDetail } from '../ItemDetail/ItemDetail';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
@@ -15,26 +20,38 @@ export const ItemDetailContainer = () => {
     const [item, setItem] = useState({});
     const [loading, setLoading] = useState(true);
 
-    const obtainProducts = () => {
-        return new Promise((resolve, reject) => {
-            setTimeout(() => {
-                resolve(productsDataBase)
-            }, 1000)
-        })
-    };
+    // const obtainProducts = () => {
+    //     return new Promise((resolve, reject) => {
+    //         setTimeout(() => {
+    //             resolve(productsDataBase)
+    //         }, 1000)
+    //     })
+    // };
+
+    // useEffect(() => {
+    //     obtainProducts()
+    //         .then((productList) => {
+
+    //             const product = productList.find(element => element.id === parseInt(id));
+    //             setItem(product);
+    //             setLoading(false)
+    //         })
+    //         .catch((error) => console.log(error))
+    // }, [id])
 
     useEffect(() => {
-        obtainProducts()
-            .then((productList) => {
-
-                const product = productList.find(element => element.id === parseInt(id));
-                setItem(product);
-                setLoading(false)
-            })
-            .catch((error) => console.log(error))
-    }, [id])
-
-
+        const getData = async () => {
+            const queryRefDetail = doc(collection(db, "items", id));
+            const response = await getDoc(queryRefDetail);
+            const results = {
+                ...response.data(),
+                id: response.id
+            }
+            setItem(results);
+            setLoading(false);
+        }
+        getData();
+    }, [])
 
     return (
         <div className={loading ? 'itemDetailLoader' : 'itemDetailContainerDiv'}>
