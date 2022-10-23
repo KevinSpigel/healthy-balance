@@ -1,11 +1,14 @@
 .cartProductDiv {
   display: flex;
   flex-flow: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
   justify-items: center;
   align-items: center;
   text-align: center;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.borderCard {
   border: 1.5px solid rgba(116, 0, 116, 0.435) !important;
 }
 
@@ -23,7 +26,8 @@
 }
 
 .totalPrice {
-  width: 300px;
+  padding: 10px;
+  width: 250px;
   text-align: center;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border: 1.5px solid rgba(116, 0, 116, 0.435) !important;

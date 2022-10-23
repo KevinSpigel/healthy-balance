@@ -17,21 +17,16 @@ export const CartContainer = () => {
     return (
         <div>
 
-            <div className="" style={{ width: "500px" }}>
+            <div style={{ width: "650px" }}>
                 {
                     cartProducts.map((product) => (
                         <div >
-                            {/* <p>{product.name}</p>
-                            <p>Precio unitario: ${product.price}</p>
-                            <p>Cantidad: {product.quantity}</p>
-                            <p>Precio por cantidad: ${product.quantityPrice}</p>
-                            <Button className="removeProductButton" onClick={() => removeItem(product.id)}><FontAwesomeIcon className="fa-light" icon={faTrash}></FontAwesomeIcon></Button> */}
-
-                            <Card className="m-4">
+                            <Card className="borderCard m-4 h5">
                                 <Card.Body className="cartProductDiv" >
                                     <Card.Text><img className="imgCart" src={product.imgProduct} alt={product.name}></img></Card.Text>
                                     <Card.Text><div>{product.name}</div></Card.Text>
                                     <Card.Text><div>${product.price}</div></Card.Text>
+                                    <Card.Text><div>{product.quantity}</div></Card.Text>
                                     <Card.Text><div>${product.quantityPrice}</div></Card.Text>
                                     <Card.Text> <Button className="removeProductButton" onClick={() => removeItem(product.id)}><FontAwesomeIcon className="fa-light" icon={faTrash}></FontAwesomeIcon></Button>
                                     </Card.Text>
@@ -42,7 +37,7 @@ export const CartContainer = () => {
                 }
             </div>
 
-            <Card className="totalPrice h4">Precio total: ${getTotalPrice()} </Card>
+            <Card className="totalPrice h3">Precio total: ${getTotalPrice()} </Card>
 
         </div>
     )
