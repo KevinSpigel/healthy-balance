@@ -51,7 +51,7 @@ export const ItemDetailContainer = () => {
             setLoading(false);
         }
         getData();
-    }, [])
+    }, [id])
 
     return (
         <div className={loading ? 'itemDetailLoader' : 'itemDetailContainerDiv'}>

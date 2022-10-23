@@ -86,7 +86,7 @@ export const ItemListContainer = ({ }) => {
 
 
 
-    }, [])
+    }, [categoryId])
 
 
     return (
