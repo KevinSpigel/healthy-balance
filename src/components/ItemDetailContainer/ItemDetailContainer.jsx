@@ -41,7 +41,7 @@ export const ItemDetailContainer = () => {
 
     useEffect(() => {
         const getData = async () => {
-            const queryRefDetail = doc(collection(db, "items", id));
+            const queryRefDetail = doc(db, "items", id);
             const response = await getDoc(queryRefDetail);
             const results = {
                 ...response.data(),
