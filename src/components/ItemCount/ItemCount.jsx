@@ -33,9 +33,13 @@ export function ItemCount({ onAdd }) {
     if (goToCart === true) {
         return (
             <div>
-                <h5>{product}</h5>
-                <Link to="/"><Button>Seguir comprando</Button></Link>
-                <Link to="/Cart"><Button>Ir a carrito</Button></Link>
+                <div>
+                    <h6 className="mt-4">Productos al carrito</h6>
+                    <h4>{product}</h4>
+                </div>
+
+                <Link className="btn success" to="/"><Button className="btn btn-secondary">Seguir comprando</Button></Link>
+                <Link to="/Cart"><Button className="btn btn-success">{<FontAwesomeIcon className="fa-2xl goToCart" icon={faCartShopping} />}</Button></Link>
             </div>
         )
     };
@@ -48,7 +52,7 @@ export function ItemCount({ onAdd }) {
                 <div>{product}</div>
                 <button className="btn btn-primary rounded-circle btn-lg counterButton" onClick={addProduct} >+</button>
             </div>
-            <Button className="mt-3 counterButton" variant="primary" onClick={() => {onAdd(product); setGoToCart(true)}}>Add to {<FontAwesomeIcon className="fa-1x" icon={faCartShopping} />}</Button>
+            <Button className="mt-3 counterButton" variant="primary" onClick={() => { onAdd(product); setGoToCart(true) }}>Add to {<FontAwesomeIcon className="fa-1x" icon={faCartShopping} />}</Button>
         </div>
     )
 
