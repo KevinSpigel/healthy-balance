@@ -6,6 +6,8 @@ import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
 
+import Swal from 'sweetalert2';
+
 
 export function ItemCount({ onAdd }) {
 
@@ -30,19 +32,36 @@ export function ItemCount({ onAdd }) {
     };
 
 
+    const succedMessage = (title) => {
+        Swal.fire({
+            toast: true,
+            icon: 'success',
+            text: title,
+            timer: 3000,
+            showConfirmButton: false,
+            position: 'bottom',
+            background: 'rgba(16, 169, 5, 0.35)',
+        })
+    };
+
+
     if (goToCart === true) {
         return (
+
             <div>
+                {succedMessage("Agregado al carrito")}
                 <div>
-                    <h6 className="mt-4">Productos al carrito</h6>
+                    <h6 className="mt-4">Productos agregados al carrito</h6>
                     <h4>{product}</h4>
                 </div>
 
                 <Link className="btn success" to="/"><Button className="btn btn-secondary">Seguir comprando</Button></Link>
                 <Link to="/Cart"><Button className="btn btn-success">{<FontAwesomeIcon className="fa-2xl goToCart" icon={faCartShopping} />}</Button></Link>
+
             </div>
         )
     };
+
 
 
     return (
