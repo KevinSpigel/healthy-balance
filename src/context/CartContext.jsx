@@ -45,13 +45,33 @@ export const CustomProvider = ({ children }) => {
         return totalProducts;
     }
 
-    const removeItem=(id)=>{
-        const newProducts=cartProducts.filter((element)=> element.id !==id);
+    const removeItem = (id) => {
+        const newProducts = cartProducts.filter((element) => element.id !== id);
         setCartProducts(newProducts);
     }
 
+    const addProductCart = (id) => {
+        const copyCartProducts = [...cartProducts];
+        const productPosition = copyCartProducts.findIndex((element) => element.id === id);
+        copyCartProducts[productPosition].quantity += 1;
+        copyCartProducts[productPosition].quantityPrice = copyCartProducts[productPosition].quantity * copyCartProducts[productPosition].price;
+        setCartProducts(copyCartProducts);
+    }
+
+    const deleteProductCart = (id) => {
+        const copyCartProducts = [...cartProducts];
+        const productPosition = copyCartProducts.findIndex((element) => element.id === id);
+        copyCartProducts[productPosition].quantity -= 1;
+        copyCartProducts[productPosition].quantityPrice = copyCartProducts[productPosition].quantity * copyCartProducts[productPosition].price;
+        setCartProducts(copyCartProducts);
+    }
+
+    const emptyCart = () => {
+        setCartProducts([]);
+    }
+
     return (
-        <CartContext.Provider value={{ cartProducts, addProductToCart, getTotalPrice, getTotalProducts, removeItem }}>
+        <CartContext.Provider value={{ cartProducts, addProductToCart, getTotalPrice, getTotalProducts, removeItem, addProductCart, deleteProductCart, emptyCart }}>
             {children}
         </CartContext.Provider>
     )

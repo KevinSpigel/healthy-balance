@@ -1,8 +1,6 @@
 import '../ItemDetailContainer/ItemDetailContainerStyles/ItemDetailContainerStyles.css';
 
-// import { productsDataBase } from '../dataBase/dataBase';
-
-import { collection, doc, getDoc } from 'firebase/firestore';
+import { doc, getDoc } from 'firebase/firestore';
 import { db } from '../../utils/firebase';
 
 import { ItemDetail } from '../ItemDetail/ItemDetail';
@@ -19,25 +17,6 @@ export const ItemDetailContainer = () => {
 
     const [item, setItem] = useState({});
     const [loading, setLoading] = useState(true);
-
-    // const obtainProducts = () => {
-    //     return new Promise((resolve, reject) => {
-    //         setTimeout(() => {
-    //             resolve(productsDataBase)
-    //         }, 1000)
-    //     })
-    // };
-
-    // useEffect(() => {
-    //     obtainProducts()
-    //         .then((productList) => {
-
-    //             const product = productList.find(element => element.id === parseInt(id));
-    //             setItem(product);
-    //             setLoading(false)
-    //         })
-    //         .catch((error) => console.log(error))
-    // }, [id])
 
     useEffect(() => {
         const getData = async () => {
