@@ -1,11 +1,31 @@
+.cartContainer {
+  background-color: #fff8f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardCartContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  width: 600px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: 1.5px solid rgba(116, 0, 116, 0.435) !important;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background-color: rgba(128, 128, 128, 0.105);
+}
+
 .cartProductDiv {
   display: flex;
   flex-flow: row;
   justify-content: space-between;
-  justify-items: center;
-  align-items: center;
+  align-items: baseline;
   text-align: center;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  height: 80px;
 }
 
 .borderCard {
@@ -25,10 +45,31 @@
   background-color: rgba(254, 11, 11, 0.574) !important;
 }
 
+.generalCards {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 25px;
+  gap: 20px;
+}
+
 .totalPrice {
   padding: 10px;
   width: 250px;
   text-align: center;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border: 1.5px solid rgba(116, 0, 116, 0.435) !important;
+}
+
+.counterCart {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: baseline;
+  gap: 5px;
+  margin: 0px;
+  padding: 0px;
 }/*# sourceMappingURL=CartContainerStyles.css.map */
