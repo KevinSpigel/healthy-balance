@@ -3,6 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 60px;
 }
 
 .cardCartContainer {
@@ -72,4 +73,48 @@
   gap: 5px;
   margin: 0px;
   padding: 0px;
+}
+
+@media screen and (max-width: 991px) {
+  .cartContainer {
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: baseline;
+    gap: 0px;
+  }
+  .cartContainer > div {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  .cartContainer > div > div {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .cartProductDiv {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 350px;
+  }
+  .generalCards {
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+  }
+  .generalCards > div {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+  }
 }/*# sourceMappingURL=CartContainerStyles.css.map */

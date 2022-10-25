@@ -40,7 +40,7 @@ export const CartContainer = () => {
             <div style={{ width: "650px" }}>
                 {
                     cartProducts.map((product) => (
-                        <div >
+                        <div>
                             <Card className="borderCard m-4 h5">
                                 <Card.Body className="cartProductDiv" >
                                     <Card.Text><img className="imgCart" src={product.imgProduct} alt={product.name}></img></Card.Text>
@@ -67,7 +67,7 @@ export const CartContainer = () => {
                 <div>
                     <Card className="totalPrice h5">Precio total: ${getTotalPrice()} </Card>
                     <Card className="totalPrice h5">Cantidad total: {getTotalProducts()} </Card>
-                    <Button className="btn btn-lg btn-success">Terminar compra</Button>
+                    <Button className="btn btn-lg btn-success mt-3">Terminar compra</Button>
 
                 </div>
                 <Button className="btn btn-sm btn-danger" onClick={emptyCart}>Vaciar carrito</Button>
