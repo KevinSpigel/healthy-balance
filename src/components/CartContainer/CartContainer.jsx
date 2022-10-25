@@ -16,22 +16,24 @@ export const CartContainer = () => {
     const value = useContext(CartContext);
     const { cartProducts, getTotalPrice, getTotalProducts, removeItem, addProductCart, deleteProductCart, emptyCart } = value;
 
+    const dataLocalStorage = JSON.parse(localStorage.getItem("allProducts"));
 
     if (cartProducts.length === 0) {
         return (
             <div className="cartContainer">
-                
-                    <Card className="cardCartContainer">
-                        <Card.Text>
-                            <h1>Lo siento,</h1>
-                            <h3>Aún no tienes productos en tu carrito</h3>
-                            <Link to="/"><Button className="btn-lg mt-3 mb-3 counterButton">Ver todos los productos</Button></Link>
-                        </Card.Text>
-                    </Card>
-                </div>
-            
+
+                <Card className="cardCartContainer">
+                    <Card.Text>
+                        <h1>Lo siento,</h1>
+                        <h3>Aún no tienes productos en tu carrito</h3>
+                        <Link to="/"><Button className="btn-lg mt-3 mb-3 counterButton">Ver todos los productos</Button></Link>
+                    </Card.Text>
+                </Card>
+            </div>
+
         )
     }
+
 
 
     return (
@@ -39,7 +41,7 @@ export const CartContainer = () => {
 
             <div style={{ width: "650px" }}>
                 {
-                    cartProducts.map((product) => (
+                    dataLocalStorage.map((product) => (
                         <div>
                             <Card className="borderCard m-4 h5">
                                 <Card.Body className="cartProductDiv" >
