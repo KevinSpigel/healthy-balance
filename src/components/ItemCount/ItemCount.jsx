@@ -39,7 +39,7 @@ export function ItemCount({ onAdd }) {
             text: title,
             timer: 3000,
             showConfirmButton: false,
-            position: 'bottom',
+            position: 'top',
             background: 'rgba(16, 169, 5, 0.35)',
         })
     };

@@ -69,16 +69,16 @@ export const CustomProvider = ({ children }) => {
 
     const emptyCart = () => {
         setCartProducts([]);
-        localStorage.removeItem("allProducts");
+        // localStorage.removeItem("allProducts");
     }
 
 
-    useEffect(() => {
-        if (cartProducts.length > 0) {
-            localStorage.setItem("allProducts", JSON.stringify(cartProducts))
-        }
-    }
-        , [cartProducts])
+    // useEffect(() => {
+    //     if (cartProducts.length > 0) {
+    //         localStorage.setItem("allProducts", JSON.stringify(cartProducts))
+    //     }
+    // }
+    //     , [cartProducts])
 
 
 

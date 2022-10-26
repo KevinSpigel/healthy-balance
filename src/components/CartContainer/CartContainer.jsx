@@ -2,21 +2,25 @@ import './CartContainerStyles/CartContainerStyles.css';
 
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+
 import { Link } from 'react-router-dom';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
 
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { CartContext } from '../../context/CartContext';
 
+import { db } from '../../utils/firebase';
+import { collection, addDoc } from 'firebase/firestore';
 
 export const CartContainer = () => {
 
     const value = useContext(CartContext);
     const { cartProducts, getTotalPrice, getTotalProducts, removeItem, addProductCart, deleteProductCart, emptyCart } = value;
 
-    const dataLocalStorage = JSON.parse(localStorage.getItem("allProducts"));
+    const { orderId, setOrderId } = useState("");
 
     if (cartProducts.length === 0) {
         return (
@@ -34,6 +38,53 @@ export const CartContainer = () => {
         )
     }
 
+    const succedOrder = (title, text, id) => {
+        Swal.fire({
+            toast: false,
+            icon: 'success',
+            title: title,
+            text: text,
+            id: id,
+            showConfirmButton: true,
+            position: 'center',
+            background: 'rgba(16, 169, 5, 0.35)',
+        })
+    };
+
+    const errorOrder = (title, text) => {
+        Swal.fire({
+            toast: false,
+            icon: 'error',
+            title: title,
+            text: text,
+            showConfirmButton: true,
+            position: 'center',
+            background: 'rgba(16, 169, 5, 0.35)',
+        })
+    };
+
+    const sendOrder = (evt) => {
+        evt.preventDefault();
+
+        const order = {
+            buyer: {
+                email: evt.target[0].value,
+                customer: evt.target[1].value,
+                phone: evt.target[2].value
+            },
+            items: cartProducts,
+            totalPrice: getTotalPrice(),
+            date: new Date().toLocaleDateString()
+        }
+        const queryRefOrders = collection(db, "orders");
+        addDoc(queryRefOrders, order).then((result) => (
+            setOrderId(result.id),
+            succedOrder("Su orden fue realizada con éxito", "El número de su pedido es: ", orderId),
+            setTimeOut(emptyCart(), 2500)
+        )).catch((error) => (
+            errorOrder("No se ha podido realzar la compra", "Por favor, vuelva a intentarlo.")
+        ))
+    }
 
 
     return (
@@ -41,7 +92,7 @@ export const CartContainer = () => {
 
             <div style={{ width: "650px" }}>
                 {
-                    dataLocalStorage.map((product) => (
+                    cartProducts.map((product) => (
                         <div>
                             <Card className="borderCard m-4 h5">
                                 <Card.Body className="cartProductDiv" >
@@ -66,15 +117,55 @@ export const CartContainer = () => {
             </div>
 
             <div className="generalCards">
-                <div>
-                    <Card className="totalPrice h5">Precio total: ${getTotalPrice()} </Card>
-                    <Card className="totalPrice h5">Cantidad total: {getTotalProducts()} </Card>
-                    <Button className="btn btn-lg btn-success mt-3">Terminar compra</Button>
+                <div className="purchaseContainer">
+                    <div>
+                        <Card className="totalPrice h5">Cantidad de productos: {getTotalProducts()} </Card>
+                        <Card className="totalPrice h1 mb-3">Precio total: ${getTotalPrice()} </Card>
+                        <Button className="btn btn-sm btn-danger" onClick={emptyCart}>Vaciar carrito</Button>
+
+                    </div>
+
+                    <Card className="borderCard">
+                        <Card.Body className="purchaseDiv">
+                            <Form onSubmit={sendOrder}>
+                                <Form.Group className="mb-3" >
+                                    <Form.Label>Email</Form.Label>
+                                    <Form.Control type="email" placeholder="Email" required />
+                                </Form.Group>
+
+                                <Form.Group className="mb-3" >
+                                    <Form.Label>Nombre</Form.Label>
+                                    <Form.Control type="text" placeholder="Nombre" required />
+                                </Form.Group>
+
+                                <Form.Group className="mb-4" >
+                                    <Form.Label>Teléfono</Form.Label>
+                                    <Form.Control type="tel" maxLength="10" placeholder="Teléfono" required />
+                                </Form.Group>
+
+                                <Form.Group className="mb-4" controlId="formBasicCheckbox">
+                                    <h4 className="mb-3">Métodos de pago:</h4>
+
+                                    <Form.Check inline name="inlineCheck" type="radio" label="Tarjeta de Débito" defaultChecked />
+                                    <Form.Check inline name="inlineCheck" type="radio" label="Tarjeta de Crédito" />
+                                    <Form.Check inline name="inlineCheck" type="radio" label="Otros" />
+
+                                </Form.Group>
+
+                                <Form.Text className="text-align-center text-muted">
+                                    Por favor, revisar la información de la compra antes de confirmar.
+                                </Form.Text>
+
+                                <Button type="submit" className="btn btn-lg btn-success mt-4">Realizar compra</Button>
+
+                            </Form>
+                        </Card.Body>
+                    </Card>
 
                 </div>
-                <Button className="btn btn-sm btn-danger" onClick={emptyCart}>Vaciar carrito</Button>
+                <div>
+                </div>
             </div>
-
         </div>
     )
 }
