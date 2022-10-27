@@ -8,6 +8,8 @@ import { Link } from 'react-router-dom';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
+import Swal from 'sweetalert2';
+
 
 import { useContext, useState } from 'react';
 import { CartContext } from '../../context/CartContext';
@@ -20,7 +22,7 @@ export const CartContainer = () => {
     const value = useContext(CartContext);
     const { cartProducts, getTotalPrice, getTotalProducts, removeItem, addProductCart, deleteProductCart, emptyCart } = value;
 
-    const { orderId, setOrderId } = useState("");
+    const [orderId, setOrderId] = useState("");
 
     if (cartProducts.length === 0) {
         return (
@@ -28,8 +30,8 @@ export const CartContainer = () => {
 
                 <Card className="cardCartContainer">
                     <Card.Text>
-                        <h1>Lo siento,</h1>
-                        <h3>Aún no tienes productos en tu carrito</h3>
+                        <h1>Lo sentimos,</h1>
+                        <h3>Aún no tienes productos en el carrito.</h3>
                         <Link to="/"><Button className="btn-lg mt-3 mb-3 counterButton">Ver todos los productos</Button></Link>
                     </Card.Text>
                 </Card>
@@ -47,7 +49,7 @@ export const CartContainer = () => {
             id: id,
             showConfirmButton: true,
             position: 'center',
-            background: 'rgba(16, 169, 5, 0.35)',
+            background: 'rgba(16, 169, 5, 0.9)',
         })
     };
 
@@ -59,7 +61,7 @@ export const CartContainer = () => {
             text: text,
             showConfirmButton: true,
             position: 'center',
-            background: 'rgba(16, 169, 5, 0.35)',
+            background: 'rgba(246, 54, 54, 0.9)',
         })
     };
 
@@ -77,13 +79,15 @@ export const CartContainer = () => {
             date: new Date().toLocaleDateString()
         }
         const queryRefOrders = collection(db, "orders");
-        addDoc(queryRefOrders, order).then((result) => (
-            setOrderId(result.id),
-            succedOrder("Su orden fue realizada con éxito", "El número de su pedido es: ", orderId),
-            setTimeOut(emptyCart(), 2500)
-        )).catch((error) => (
-            errorOrder("No se ha podido realzar la compra", "Por favor, vuelva a intentarlo.")
-        ))
+        addDoc(queryRefOrders, order)
+            .then((response) => {
+                setOrderId(response.id);
+                succedOrder("Su orden fue realizada con éxito", `El código de su pedido es: ${orderId}`);
+                setTimeout(() => emptyCart(), 2500)
+            }
+            )
+            .catch((error) => (
+                errorOrder("No se ha podido realzar la compra", "Por favor, vuelva a intentarlo.")))
     }
 
 
@@ -93,7 +97,7 @@ export const CartContainer = () => {
             <div style={{ width: "650px" }}>
                 {
                     cartProducts.map((product) => (
-                        <div>
+                        <div key={product.id}>
                             <Card className="borderCard m-4 h5">
                                 <Card.Body className="cartProductDiv" >
                                     <Card.Text><img className="imgCart" src={product.imgProduct} alt={product.name}></img></Card.Text>

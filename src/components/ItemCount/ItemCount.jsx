@@ -1,5 +1,6 @@
 import '../ItemCount/ItemCountStyles/ItemCountStyles.css';
-import { useState } from 'react';
+import { useState} from 'react';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 
@@ -37,10 +38,10 @@ export function ItemCount({ onAdd }) {
             toast: true,
             icon: 'success',
             text: title,
-            timer: 3000,
+            timer: 1500,
             showConfirmButton: false,
             position: 'top',
-            background: 'rgba(16, 169, 5, 0.35)',
+            background: 'rgba(16, 169, 5, 0.9)',
         })
     };
 

@@ -10,13 +10,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 400px;
-  width: 600px;
+  height: 400px !important;
+  width: 600px !important;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border: 1.5px solid rgba(116, 0, 116, 0.435) !important;
   margin-top: 30px;
   margin-bottom: 30px;
-  background-color: rgba(128, 128, 128, 0.105);
+  background-color: rgba(128, 128, 128, 0.105) !important;
 }
 
 .cartProductDiv {
