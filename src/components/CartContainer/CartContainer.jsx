@@ -11,7 +11,7 @@ import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import Swal from 'sweetalert2';
 
 
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import { CartContext } from '../../context/CartContext';
 
 import { db } from '../../utils/firebase';
@@ -21,8 +21,6 @@ export const CartContainer = () => {
 
     const value = useContext(CartContext);
     const { cartProducts, getTotalPrice, getTotalProducts, removeItem, addProductCart, deleteProductCart, emptyCart } = value;
-
-    const [orderId, setOrderId] = useState("");
 
     if (cartProducts.length === 0) {
         return (
@@ -40,13 +38,12 @@ export const CartContainer = () => {
         )
     }
 
-    const succedOrder = (title, text, id) => {
+    const succedOrder = (title, text) => {
         Swal.fire({
             toast: false,
             icon: 'success',
             title: title,
             text: text,
-            id: id,
             showConfirmButton: true,
             position: 'center',
             background: 'rgba(16, 169, 5, 0.9)',
@@ -81,8 +78,7 @@ export const CartContainer = () => {
         const queryRefOrders = collection(db, "orders");
         addDoc(queryRefOrders, order)
             .then((response) => {
-                setOrderId(response.id);
-                succedOrder("Su orden fue realizada con éxito", `El código de su pedido es: ${orderId}`);
+                succedOrder("Su orden fue realizada con éxito", `El código de su orden es: ${response.id}`);
                 setTimeout(() => emptyCart(), 2500)
             }
             )
