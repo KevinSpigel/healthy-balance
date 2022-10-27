@@ -10,13 +10,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 400px !important;
+  height: 420px !important;
   width: 600px !important;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border: 1.5px solid rgba(116, 0, 116, 0.435) !important;
   margin-top: 30px;
   margin-bottom: 30px;
   background-color: rgba(128, 128, 128, 0.105) !important;
+}
+.cardCartContainer img {
+  width: 225px;
+  height: 225px;
 }
 
 .cartProductDiv {
@@ -111,6 +115,14 @@
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
+  }
+  .cardCartContainer {
+    height: 370px !important;
+    width: 420px !important;
+  }
+  .cardCartContainer img {
+    width: 200px;
+    height: 280px;
   }
   .cartProductDiv {
     display: flex;

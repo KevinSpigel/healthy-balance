@@ -4,13 +4,15 @@
     margin-top: 30px;
     margin-bottom: 30px;
     width: 350px;
-    height: 500px;;
+    height: 500px;
 }
 
 .cardDiv {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 300px;
+    height: 200px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     gap: 15px;
     border: 1.5px solid rgba(116, 0, 116, 0.435) !important;
@@ -24,11 +26,9 @@
 }
 
 .imgProducts {
-    width: 95%;
-    height: 95%;
-    object-fit: fit;
+    height: 350px !important;
 }
 
-.titleDiv{
-margin-bottom: 20px;
+.titleDiv {
+    margin-bottom: 20px;
 }

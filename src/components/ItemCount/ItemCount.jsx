@@ -1,5 +1,5 @@
 import '../ItemCount/ItemCountStyles/ItemCountStyles.css';
-import { useState} from 'react';
+import { useState } from 'react';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
@@ -34,15 +34,21 @@ export function ItemCount({ onAdd }) {
 
 
     const succedMessage = (title) => {
-        Swal.fire({
+        Swal.mixin({
             toast: true,
-            icon: 'success',
-            text: title,
-            timer: 1500,
+            position: 'bottom',
             showConfirmButton: false,
-            position: 'top',
-            background: 'rgba(16, 169, 5, 0.9)',
+            timer: 3000,
+            didOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
         })
+
+            .fire({
+                icon: 'success',
+                title: title
+            })
     };
 
 
@@ -50,7 +56,7 @@ export function ItemCount({ onAdd }) {
         return (
 
             <div>
-                {succedMessage("Agregado al carrito")}
+                {succedMessage("Producto agregado al carrito")}
                 <div>
                     <h6 className="mt-4">Productos agregados al carrito</h6>
                     <h4>{product}</h4>

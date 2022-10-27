@@ -1,4 +1,5 @@
 import './CartContainerStyles/CartContainerStyles.css';
+import EmptyCart from '../../assets/emptyCart.png';
 
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
@@ -27,6 +28,7 @@ export const CartContainer = () => {
             <div className="cartContainer">
 
                 <Card className="cardCartContainer">
+                    <img src={EmptyCart} alt="Carrito Vacio" />
                     <Card.Text>
                         <h1>Lo sentimos,</h1>
                         <h3>Aún no tienes productos en el carrito.</h3>
@@ -46,7 +48,6 @@ export const CartContainer = () => {
             text: text,
             showConfirmButton: true,
             position: 'center',
-            background: 'rgba(16, 169, 5, 0.9)',
         })
     };
 
@@ -58,9 +59,9 @@ export const CartContainer = () => {
             text: text,
             showConfirmButton: true,
             position: 'center',
-            background: 'rgba(246, 54, 54, 0.9)',
         })
     };
+
 
     const sendOrder = (evt) => {
         evt.preventDefault();
@@ -85,7 +86,6 @@ export const CartContainer = () => {
             .catch((error) => (
                 errorOrder("No se ha podido realzar la compra", "Por favor, vuelva a intentarlo.")))
     }
-
 
     return (
         <div className="cartContainer">
