@@ -1,11 +1,12 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export const CartContext = React.createContext();
 
 export const CustomProvider = ({ children }) => {
 
     const [cartProducts, setCartProducts] = useState([]);
+
 
     const isInCart = (id) => {
         const productExist = cartProducts.some((element) => element.id === id);
@@ -36,6 +37,20 @@ export const CustomProvider = ({ children }) => {
         }
     }
 
+
+    useEffect(() => {
+        if (cartProducts.length > 0) {
+            localStorage.setItem('products', JSON.stringify(cartProducts));
+        }
+    }, [cartProducts]);
+
+    if (localStorage.getItem("products") != null && cartProducts.length === 0) {
+        let productStorage = JSON.parse(localStorage.getItem("products"))
+        setCartProducts(productStorage)
+    };
+
+
+
     const getTotalPrice = () => {
         const totalPrice = cartProducts.reduce((acc, curr) => acc + curr.quantityPrice, 0);
         return totalPrice;
@@ -47,6 +62,7 @@ export const CustomProvider = ({ children }) => {
     }
 
     const removeItem = (id) => {
+        localStorage.clear();
         const newProducts = cartProducts.filter((element) => element.id !== id);
         setCartProducts(newProducts);
     }
@@ -68,12 +84,13 @@ export const CustomProvider = ({ children }) => {
     }
 
     const emptyCart = () => {
+        localStorage.clear();
         setCartProducts([]);
     }
 
 
     return (
-        <CartContext.Provider value={{ cartProducts, addProductToCart, getTotalPrice, getTotalProducts, removeItem, addProductCart, deleteProductCart, emptyCart}}>
+        <CartContext.Provider value={{ cartProducts, addProductToCart, getTotalPrice, getTotalProducts, removeItem, addProductCart, deleteProductCart, emptyCart }}>
             {children}
         </CartContext.Provider>
     )
